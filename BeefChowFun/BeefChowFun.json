@@ -1,0 +1,15 @@
+{
+  "Author": "ccc",
+  "Name": "BeefChowFun",
+  "InternalName": "BeefChowFun",
+  "AssemblyVersion": "1.0.0.0",
+  "Description": "干炒牛河：自动化管理雇员的收取、派遣、改价等操作。移植自 DailyRoutines 的 AutoRetainerWork 模块。",
+  "ApplicableVersion": "any",
+  "DalamudApiLevel": 15,
+  "LoadRequiredState": 0,
+  "LoadSync": false,
+  "CanUnloadAsync": false,
+  "LoadPriority": 0,
+  "Punchline": "干炒牛河 - 雇员自动化作业工具",
+  "AcceptsFeedback": true
+}
