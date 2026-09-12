@@ -1,0 +1,32 @@
+📦 需要上传的文件清单
+=====================================
+
+项目路径: /home/ardenterra/Sourcecode/beefchowfun
+
+✅ 所有文件都已经准备好，直接推送到 GitHub:
+
+cd /home/ardenterra/Sourcecode/beefchowfun
+git status
+git push origin main
+
+⭐ 最重要的文件:
+   repo/pluginmaster.json  <- 用户安装链接的核心文件
+
+🔍 验证上传是否成功:
+   打开浏览器访问:
+   https://raw.githubusercontent.com/PineappleOrangeJelly/BeefChowFun/main/repo/pluginmaster.json
+   
+   能看到 JSON 内容就成功了！
+
+🎮 用户安装链接:
+   https://raw.githubusercontent.com/PineappleOrangeJelly/BeefChowFun/main/repo/pluginmaster.json
+   
+   在游戏中 /xlsettings -> 实验性 -> 自定义插件仓库 -> 粘贴这个链接
+
+📦 还需要创建 Release:
+   1. 访问 https://github.com/PineappleOrangeJelly/BeefChowFun/releases/new
+   2. Tag: v1.0.0.0
+   3. Title: v1.0.0.0
+   4. 上传: /home/ardenterra/Sourcecode/beefchowfun/release/BeefChowFun-v1.0.0.0.zip
+   5. 点击 Publish release
+
