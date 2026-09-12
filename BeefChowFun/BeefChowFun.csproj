@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <Authors>ccc</Authors>
+        <Version>1.0.0.0</Version>
+        <Description>自动雇员作业工具</Description>
+        <PackageProjectUrl>https://github.com/ccc/BeefChowFun</PackageProjectUrl>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <TargetFramework>net10.0-windows7.0</TargetFramework>
+        <Platforms>x64</Platforms>
+        <LangVersion>preview</LangVersion>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <DalamudLibPath>$(appdata)/.xlcore_cn/dalamud/Hooks/dev/</DalamudLibPath>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+        <AssemblyName>BeefChowFun</AssemblyName>
+        <RootNamespace>BeefChowFun</RootNamespace>
+        <Nullable>enable</Nullable>
+        <OutputPath>bin/Release</OutputPath>
+    </PropertyGroup>
+
+    <!-- Linux 环境支持 -->
+    <PropertyGroup Condition="'$(OS)' != 'Windows_NT'">
+        <DalamudLibPath>$(HOME)/.xlcore_cn/dalamud/Hooks/dev/</DalamudLibPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- Dalamud 核心依赖 -->
+        <Reference Include="Dalamud">
+            <HintPath>$(DalamudLibPath)Dalamud.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="FFXIVClientStructs">
+            <HintPath>$(DalamudLibPath)FFXIVClientStructs.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="Lumina">
+            <HintPath>$(DalamudLibPath)Lumina.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="Lumina.Excel">
+            <HintPath>$(DalamudLibPath)Lumina.Excel.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+
+        <Reference Include="Newtonsoft.Json">
+            <HintPath>$(DalamudLibPath)Newtonsoft.Json.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="Dalamud.Bindings.ImGui">
+            <HintPath>$(DalamudLibPath)Dalamud.Bindings.ImGui.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="InteropGenerator.Runtime">
+            <HintPath>$(DalamudLibPath)InteropGenerator.Runtime.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="Serilog">
+            <HintPath>$(DalamudLibPath)Serilog.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- DalamudPackager 用于打包 -->
+        <PackageReference Include="DalamudPackager" Version="15.0.0" />
+        <!-- ImGui.NET 用于编译和运行时类型引用 -->
+        <PackageReference Include="ImGui.NET" Version="1.89.9.1" />
+    </ItemGroup>
+    
+    <Target Name="RemoveConflictingDlls" AfterTargets="Build">
+        <!-- 移除可能与 Dalamud 冲突的 DLL，但保留 ImGui.NET.dll -->
+        <ItemGroup>
+            <FilesToDelete Include="$(OutputPath)Serilog.dll" />
+        </ItemGroup>
+        <Delete Files="@(FilesToDelete)" />
+    </Target>
+
+    <ItemGroup>
+        <!-- ECommons 依赖 - 引用已安装的版本 -->
+        <Reference Include="ECommons">
+            <HintPath>$(HOME)/.xlcore_cn/installedPlugins/Lifestream/2.5.4.17/ECommons.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- 插件清单 -->
+        <None Update="BeefChowFun.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+</Project>

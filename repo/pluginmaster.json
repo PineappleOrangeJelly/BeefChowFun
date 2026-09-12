@@ -1,0 +1,21 @@
+[
+  {
+    "Author": "ccc",
+    "Name": "BeefChowFun",
+    "InternalName": "beefchowfun",
+    "Punchline": "干炒牛河 - 雇员自动化作业工具",
+    "Description": "干炒牛河：自动化管理雇员的收取、派遣、改价等操作。移植自 DailyRoutines 的 AutoRetainerWork 模块。",
+    "AssemblyVersion": "1.0.0.0",
+    "RepoUrl": "https://github.com/PineappleOrangeJelly/BeefChowFun",
+    "ApplicableVersion": "any",
+    "DalamudApiLevel": 15,
+    "LoadPriority": 0,
+    "IconUrl": "https://raw.githubusercontent.com/PineappleOrangeJelly/BeefChowFun/main/icon.png",
+    "ImageUrls": [],
+    "DownloadLinkInstall": "https://github.com/PineappleOrangeJelly/BeefChowFun/releases/latest/download/BeefChowFun-v1.0.0.0.zip",
+    "DownloadLinkUpdate": "https://github.com/PineappleOrangeJelly/BeefChowFun/releases/latest/download/BeefChowFun-v1.0.0.0.zip",
+    "DownloadLinkTesting": "https://github.com/PineappleOrangeJelly/BeefChowFun/releases/latest/download/BeefChowFun-v1.0.0.0.zip",
+    "DownloadCount": 0,
+    "LastUpdate": "1736640000"
+  }
+]

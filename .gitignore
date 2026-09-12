@@ -1,0 +1,17 @@
+## Build
+bin/
+obj/
+*.user
+*.suo
+.vs/
+.vscode/
+.idea/
+
+## Release (keep only zip)
+release/*.tar.gz
+release/*.txt
+release/*.md
+
+## Temp
+*.tmp
+*.log

@@ -1,0 +1,12 @@
+global using Dalamud.Plugin;
+global using Dalamud.Plugin.Services;
+global using Dalamud.Interface.Windowing;
+global using ECommons;
+global using ECommons.DalamudServices;
+global using ECommons.Automation;
+global using ECommons.Throttlers;
+global using System;
+global using System.Collections.Generic;
+global using System.Linq;
+global using System.Numerics;
+global using FFXIVClientStructs.FFXIV.Component.GUI;

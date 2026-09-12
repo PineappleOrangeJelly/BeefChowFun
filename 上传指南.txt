@@ -1,0 +1,57 @@
+✅✅✅ 准备就绪！✅✅✅
+
+================================================================================
+  你的插件仓库链接
+================================================================================
+
+https://raw.githubusercontent.com/PineappleOrangeJelly/BeefChowFun/main/repo/pluginmaster.json
+
+用户只需要这个链接！
+
+================================================================================
+  GitHub 上传步骤
+================================================================================
+
+1. 创建 GitHub 仓库
+   - 访问: https://github.com/new
+   - Repository name: BeefChowFun
+   - 必须选择 Public
+   - 点击 "Create repository"
+
+2. 上传代码
+   cd /home/ardenterra/Sourcecode/beefchowfun
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/PineappleOrangeJelly/BeefChowFun.git
+   git push -u origin main
+
+3. 创建 Release
+   - 在 GitHub 仓库页面，点击右侧 "Releases"
+   - 点击 "Create a new release"
+   - Tag version: v1.0.0.0
+   - Release title: v1.0.0.0
+   - 上传文件: release/BeefChowFun-v1.0.0.0.zip
+   - 点击 "Publish release"
+
+4. 验证仓库链接
+   - 在浏览器打开:
+     https://raw.githubusercontent.com/PineappleOrangeJelly/BeefChowFun/main/repo/pluginmaster.json
+   - 应该能看到 JSON 内容
+
+================================================================================
+  用户安装步骤
+================================================================================
+
+1. 游戏中输入 /xlsettings
+2. 点击 "实验性" 标签
+3. 找到 "自定义插件仓库"
+4. 粘贴你的仓库链接:
+   https://raw.githubusercontent.com/PineappleOrangeJelly/BeefChowFun/main/repo/pluginmaster.json
+5. 点击 "+" 按钮，然后保存
+6. 输入 /xlplugins
+7. 搜索 "干炒牛河"
+8. 点击安装
+
+项目路径: /home/ardenterra/Sourcecode/beefchowfun
